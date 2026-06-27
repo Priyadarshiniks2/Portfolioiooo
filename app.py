@@ -59,7 +59,7 @@ def index():
 @app.route("/resume")
 def resume():
     resume_dir = os.path.join(app.static_folder, "resume")
-    return send_from_directory(resume_dir, "PRIYA_RESUME.pdf", as_attachment=True)
+    return send_from_directory(resume_dir, "PRIYA_RESUME.pdf", as_attachment=False)
 
 # --- Serve embedded resume file (for iframe) ---
 @app.route("/static/resume/<path:filename>")

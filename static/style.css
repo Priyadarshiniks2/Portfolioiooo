@@ -59,7 +59,21 @@ body{
   overflow:hidden;
 }
 .hero-inner{max-width:900px;z-index:10}
-.hero h1{font-size:2.6rem;margin:0 0 10px}
+@media(max-width:768px){
+
+.hero{
+padding-top:150px;
+}
+
+.hero h1{
+font-size:2rem;
+}
+
+.lead{
+font-size:16px;
+}
+
+}
 .lead{color:var(--muted);font-size:1.05rem;margin:0 0 20px}
 .accent{background:linear-gradient(90deg,var(--accent),var(--accent-2));-webkit-background-clip:text;background-clip:text;color:transparent;font-weight:800}
 
@@ -80,6 +94,13 @@ body{
 .card h2{margin-top:0}
 .two-col{display:grid;grid-template-columns:1fr 360px;gap:24px;align-items:start}
 .info-cards .info{background:var(--glass);padding:16px;border-radius:12px;margin-bottom:12px}
+.project-card{
+
+display:flex;
+flex-direction:column;
+justify-content:space-between;
+
+}
 
 /* skills */
 .skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
@@ -108,6 +129,11 @@ body{
   width:100%;padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,0.06);background:transparent;color:var(--white);margin-bottom:10px;outline:none
 }
 .contact-form .btn{width:100%}
+.contact-list{
+
+padding-left:18px;
+
+}
 
 /* buttons */
 .btn{
@@ -306,13 +332,13 @@ body{
   margin-top: 20px;
 }
 
-.achievement {
-  background: var(--glass);
-  border-radius: 14px;
-  padding: 20px;
-  text-align: left;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
-  border: 1px solid rgba(255, 255, 255, 0.05);
+.achievement{
+
+display:flex;
+flex-direction:column;
+justify-content:space-between;
+height:100%;
+
 }
 
 .achievement:hover {
@@ -331,4 +357,54 @@ body{
   color: var(--muted);
   font-size: 0.95rem;
   margin: 0;
+}
+
+
+@media (max-width:768px){
+
+.nav{
+    flex-direction:column;
+    gap:15px;
+    padding:15px;
+}
+
+.nav-links{
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:10px;
+}
+
+.nav-links a{
+    font-size:14px;
+}
+
+}
+
+/* ===== Skills ===== */
+
+.skill-category{
+    margin-bottom:24px;
+}
+
+.skill-category h4{
+    margin-bottom:10px;
+    color:#6dd3ff;
+    font-size:1.05rem;
+    font-weight:600;
+}
+
+.skill-category p{
+    background:rgba(255,255,255,.05);
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:12px;
+    padding:16px 20px;
+    line-height:1.9;
+    color:#e8eef7;
+    transition:all .3s ease;
+}
+
+.skill-category p:hover{
+    transform:translateY(-3px);
+    border-color:#6dd3ff;
+    box-shadow:0 10px 25px rgba(109,211,255,.15);
 }
